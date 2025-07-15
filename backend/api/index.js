@@ -15,4 +15,4 @@ app.use(express.json())
 app.get('/', (req, res) => res.send('API working'))
 app.post('/clerk', clerkWebhooks)
 
-export const handler = serverless(app) 
+export default  serverless(app) 
