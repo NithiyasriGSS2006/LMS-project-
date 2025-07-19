@@ -124,6 +124,9 @@ export const stripeWebhooks = async (req, res) => {
 
     purchaseData.status = 'completed'
     await purchaseData.save()
+      console.log('Saved course:', courseData._id)
+      console.log('Saved user:', userData._id)
+      console.log('Updated purchase:', purchaseData.status)
 
     console.log('User enrolled from payment_intent.succeeded')
   } catch (err) {
