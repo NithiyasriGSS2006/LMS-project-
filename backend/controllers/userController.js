@@ -90,7 +90,7 @@ export const purchaseCourse = async (req, res) => {
         purchaseId: newPurchase._id.toString(),
       },
     });
-
+    res.json({metadata: session.metadata})
     res.json({ success: true, session_url: session.url });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
